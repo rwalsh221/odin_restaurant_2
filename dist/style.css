@@ -144,6 +144,7 @@ img {
     #ff3e3e 20px
   );
   height: 92%;
+  overflow: hidden;
 }
 
 .sidebar {
@@ -335,27 +336,39 @@ img {
   color: var(--main-color-red);
   border-radius: 5px;
   box-shadow: 2px 2px 5px var(--shadow-color-black);
-  transition: 0.5s;
+  transition: all 0.2s;
   cursor: pointer;
 }
 
-.btn__active {
+.btn__active,
+.nav-bar__btn:hover {
   border: 3px solid var(--main-color-white);
   background-color: var(--main-color-red);
   color: var(--main-color-white);
 }
 
-.nav-bar__btn:active {
-  border: 3px solid var(--main-color-white);
-  background-color: var(--main-color-red);
-  color: var(--main-color-white);
+.nav-bar__btn:active,
+.btn__active {
   box-shadow: none;
   transform: translateY(2px);
 }
 
 .footer__header {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+.icon__info {
+  margin: 0 auto;
+  width: max-content;
+  color: var(--main-color-red);
+  font-family: var(--font-dancing-script);
+}
+
+a:link,
+a:visited {
+  color: var(--main-color-red);
+  text-decoration: none;
 }
 
 .dash {
@@ -376,68 +389,70 @@ img {
 }
 
 .menu__img {
-  height: 100%;
-  flex-basis: 40%;
-  background-color: var(--main-color-red);
-
   display: grid;
   gap: 5px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
+
+  position: relative;
+  height: 100%;
+  width: 100%;
+  flex-basis: 40%;
+  background-color: var(--main-color-red);
+  overflow: hidden;
+}
+
+.menu__img--zoom {
+  overflow: hidden;
+  transform: scale(1.1);
+}
+
+.img__size {
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+}
+
+.menu__img--ovflow {
+  overflow: hidden;
 }
 
 .menu__img--1 {
-  width: 100%;
-  height: 100%;
   grid-row: 1 / span 1;
   grid-column: 1 / span 1;
 }
 
 .menu__img--2 {
-  width: 100%;
-  height: 100%;
   grid-row: 2 / span 1;
   grid-column: 4 / span 1;
 }
 
 .menu__img--3 {
-  width: 100%;
-  height: 100%;
   grid-row: 1 / span 1;
   grid-column: 2 / span 2;
 }
 
 .menu__img--4 {
-  width: 100%;
-  height: 100%;
   grid-row: 1 / span 1;
   grid-column: 4 / span 1;
 }
 
 .menu__img--5 {
-  width: 100%;
-  height: 100%;
   grid-row: 3 / span 2;
   grid-column: 3 / span 2;
 }
 
 .menu__img--6 {
-  width: 100%;
-  height: 100%;
   grid-row: 2 / span 1;
   grid-column: 1 / span 2;
 }
 
 .menu__img--7 {
-  width: 100%;
-  height: 100%;
   grid-row: 2 / span 1;
   grid-column: 3 / span 1;
 }
 
 .menu__img--8 {
-  width: 100%;
-  height: 100%;
   grid-row: 3 / span 2;
   grid-column: 1 / span 2;
 }
@@ -606,6 +621,40 @@ img {
   border-radius: 10rem;
   margin-bottom: 0.5rem;
 }
+
+.map__popup {
+  /* background-color: var(--main-color-red); */
+  height: 5rem;
+  width: 10rem;
+  font-family: var(--font-dancing-script);
+  color: var(--main-color-red);
+  font-size: 1.2rem;
+  /* background-image: url("./img/blade_pork.jpg"); */
+  border: none;
+  cursor: pointer;
+  /* background-color: rgba(0, 0, 0, 0); */
+}
+
+.tab-fade {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mapboxgl-popup-content {
+  /* background-color: var(--main-color-white); */
+}
+
+/* .mapboxgl-popup-content {
+  background-color: var(--main-color-red);
+} */
 /* ********************************* HOME .CONTENT__GRID ******************************************************************
   display: flex;
   flex-direction: column;

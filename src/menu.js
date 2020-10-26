@@ -1,44 +1,18 @@
-// const renderMenu = () => {
-//     const menuFactory = (id, name, price, kiloGram, imageSrc) => {
-//         const content = document.querySelector('.content')
-        
-//         const imageHtml = `<img src="${imageSrc}" alt="Image of ${name}" class="menu__img--${id}">`
-    
-//         const menuItemHtml =`<li class="menu__item">${name}</li>`
-    
-//         const menuPriceHtml =``
-    
-//         if (kiloGram === true) {
-//             menuPriceHtml = `<li class="menu__price">£${price} / KG</li>`
-//         }   else {
-//             menuPriceHtml = `<li class="menu__price">£${price}</li>`
-//         }
-        
-//         const render = () => {
-//             document.querySelector('.menu__img').insertAdjacentHTML("beforeend", imageHtml);
-//             document.querySelector('.menu__list--item').insertAdjacentHTML("beforeend", menuItemHtml);
-//             document.querySelector('.menu__list--price').insertAdjacentHTML("beforeend", menuPriceHtml)
-//         }
-        
-//     }
+import {removeChild, buttonActive} from './utilities'
 
-//     const sausage = menuFactory(1, 'Sausage', 3.40, false, './img/dir_sausage.jpg');
-//     return sausage
-//     // console.log(sausage.imageHtml)
-// };
-import removeChild from './utilities'
-
+//Sets initial html for menu page
 const menuSkeleton = () => {
     const contentGrid = document.querySelector('.content__grid');
 
     const content = document.querySelector('.content')
 
-    const menuImageHtml = `<div class="menu__img"></div>`
-    // const menuImageHtml = `<h2 class="heading__secondary home__heading">WELCOME!</h2>`
+    const menuImageHtml = `<div class="menu__img tab-fade"></div>`
 
-    const menuContentHtml = `<div class="menu__content"><div class="menu__heading"><h3 class="heading__tertiary menu__heading--main">MENU</h3><h4 class="menu__heading--secondary">All our products are locally sourced</h4></div><div class="menu__list"><ul class="menu__list--item"></ul><ul class="menu__list--price"></ul></div></div>`
+    const menuContentHtml = `<div class="menu__content tab-fade"><div class="menu__heading"><h3 class="heading__tertiary menu__heading--main">MENU</h3><h4 class="menu__heading--secondary">All our products are locally sourced</h4></div><div class="menu__list"><ul class="menu__list--item" id="menu-list"></ul><ul class="menu__list--price"></ul></div></div>`
 
-    if (content.hasChildNodes) removeChild()
+    removeChild()
+
+    buttonActive('btn__menu')
 
     contentGrid.removeAttribute('style');
 
@@ -49,13 +23,13 @@ const menuSkeleton = () => {
 
 }
 
-
+// (id to match image for animation, name of product, price of product, kilogram true or false, image src)
 const menuFactory = (id, name, price, kiloGram, imageSrc) => {
     const content = document.querySelector('.content')
     
-    const imageHtml = `<img src="${imageSrc}" alt="Image of ${name}" class="menu__img--${id}">`
+    const imageHtml = `<div class="menu__img--${id} menu__img--ovflow"><img src="${imageSrc}" alt="Image of ${name}" class="img__size" id="menu__img--${id}"></div>`
 
-    const menuItemHtml =`<li class="menu__item">${name}</li>`
+    const menuItemHtml =`<li class="menu__item" id="hover-${id}">${name}</li>`
 
     let menuPriceHtml =``
 
