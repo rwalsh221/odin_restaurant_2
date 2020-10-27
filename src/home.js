@@ -12,7 +12,7 @@ const homeContent = () => {
 
     
 
-    removeChild()
+    removeChild(content)
     
     buttonActive()
 

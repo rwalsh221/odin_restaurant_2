@@ -6,9 +6,9 @@ const aboutContent = () => {
     const htmlText = `<div class="content__text tab-fade"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat atque esse tenetur, architecto nulla in magnam dignissimos optio hic eveniet nesciunt ipsum ullam inventore ab laboriosam aspernatur! Beatae deleniti vel adipisci aperiam ex at? Possimus mollitia recusandae sequi magni expedita quia nemo culpa cum placeat nobis sint, eveniet ullam optio cupiditate ut. Eligendi doloremque rerum facilis quisquam a dolor similique veniam atque quod officia consectetur dignissimos ipsum veritatis, libero et maxime molestiae numquam vitae nemo rem? Esse ab possimus inventore! Eius velit, soluta assumenda non dicta labore fugit laudantium tempora aspernatur, officia asperiores blanditiis explicabo suscipit maiores quas nesciunt praesentium.</p></div>`
     const contentGrid = document.querySelector('.content__grid');
     const content = document.querySelector('.content');
-    const button = document.getElementById('btn__about');
+    
 
-    removeChild();
+    removeChild(content);
     buttonActive('btn__about')
 
     contentGrid.style.display="grid"

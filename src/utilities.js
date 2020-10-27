@@ -1,10 +1,10 @@
 // remove html from .content on tab change
-const removeChild = () => {
-    const content = document.querySelector('.content')
+const removeChild = (selector) => {
+    // const content = document.querySelector('.content')
 
-    if (content.hasChildNodes) {
-        while(content.firstChild) {
-            content.removeChild(content.lastChild);
+    if (selector.hasChildNodes) {
+        while(selector.firstChild) {
+            selector.removeChild(selector.lastChild);
         }
     }
 

@@ -9,7 +9,7 @@ const contactContent = () => {
     const contentGrid = document.querySelector('.content__grid');
     const content = document.querySelector('.content')
 
-    removeChild()
+    removeChild(content)
 
     buttonActive('btn__contact')
 

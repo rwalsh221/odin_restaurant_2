@@ -10,7 +10,7 @@ const menuSkeleton = () => {
 
     const menuContentHtml = `<div class="menu__content tab-fade"><div class="menu__heading"><h3 class="heading__tertiary menu__heading--main">MENU</h3><h4 class="menu__heading--secondary">All our products are locally sourced</h4></div><div class="menu__list"><ul class="menu__list--item" id="menu-list"></ul><ul class="menu__list--price"></ul></div></div>`
 
-    removeChild()
+    removeChild(content)
 
     buttonActive('btn__menu')
 
@@ -25,8 +25,6 @@ const menuSkeleton = () => {
 
 // (id to match image for animation, name of product, price of product, kilogram true or false, image src)
 const menuFactory = (id, name, price, kiloGram, imageSrc) => {
-    const content = document.querySelector('.content')
-    
     const imageHtml = `<div class="menu__img--${id} menu__img--ovflow"><img src="${imageSrc}" alt="Image of ${name}" class="img__size" id="menu__img--${id}"></div>`
 
     const menuItemHtml =`<li class="menu__item" id="hover-${id}">${name}</li>`
