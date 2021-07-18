@@ -362,9 +362,15 @@ img {
   transform: translateY(2px);
 }
 
+/* ************************************************ FOOTER */
+
+footer {
+  padding: 1rem;
+}
+
 .footer__header {
   text-align: center;
-  margin-top: 0.1rem;
+  margin: 0.5rem;
 }
 
 .icon__info {
@@ -372,6 +378,7 @@ img {
   width: max-content;
   color: var(--main-color-red);
   font-family: var(--font-dancing-script);
+  font-size: 2rem;
 }
 
 a:link,
