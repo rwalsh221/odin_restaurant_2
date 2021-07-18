@@ -215,7 +215,7 @@ img {
 
 /* ************************************************ ABOUT TAB STYLES */
 
-.about__img {
+.about__img--container {
   /* height: 103%; */
   grid-area: img;
   display: flex;
@@ -224,18 +224,17 @@ img {
   justify-content: space-around;
 }
 
-.content__img {
-  width: 22rem;
-  height: 20rem;
-  /* margin: 1rem auto; */
-  border-radius: 200rem;
-  padding: 0.2rem;
+.about__img {
+  width: 60%;
+  height: 40%;
+  border-radius: 50%;
+  padding: 0.5rem;
   border: var(--border-red-5px);
   background-color: var(--main-color-white);
   box-shadow: 2px 2px 5px var(--shadow-color-black);
 }
 
-.content__text {
+.about__text {
   grid-area: content-text;
   position: relative;
   background-color: var(--main-color-white);
@@ -245,22 +244,20 @@ img {
   border: var(--border-red-5px);
   border-radius: 1rem;
   box-shadow: 2px 2px 5px var(--shadow-color-black);
+  padding: 3rem;
 }
 
-.content__text p {
-  display: block;
+.about__text p {
+  text-align: center;
   position: absolute;
   left: 50%;
   top: 50%;
-  height: max-content;
-  width: 60%;
-  margin: 0 auto;
   transform: translate(-50%, -50%);
-  font-size: 1.5rem;
+  width: 80%;
+  font-size: 3rem;
   font-family: 'Dancing Script', cursive;
   color: var(--main-color-red);
-  line-height: 1.8rem;
-  padding: 2rem;
+  padding: 1rem;
   border: 1px dashed var(--main-color-red);
 }
 
