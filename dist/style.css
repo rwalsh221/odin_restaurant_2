@@ -264,7 +264,7 @@ img {
   border: 1px dashed var(--main-color-red);
 }
 
-/* ************************************************ REVIEW CONTAINER */
+/* ************************************************ REVIEW SIDEBAR */
 
 .review__heading {
   width: max-content;
@@ -274,54 +274,51 @@ img {
 
 .review__container {
   display: flex;
-  /* height: 90%; */
+  height: 90%;
+  margin: 1rem;
   flex-direction: column;
   justify-content: space-around;
 }
 
 .review {
   font-family: var(--font-dancing-script);
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: var(--main-color-red);
   border: 2px solid var(--main-color-red);
   border-radius: 2rem;
   width: 95%;
-  margin: 0 auto;
+  margin: 1rem auto;
   padding: 0.5rem;
   background-color: var(--secondary-color-red-light);
   box-shadow: 2px 2px 5px var(--shadow-color-black);
 }
 
 .review__customer {
-  /* width: max-content; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 0.2rem;
+  margin: 1rem 0;
 }
 
 .review__img {
-  height: 5rem;
-  width: 5rem;
-  border-radius: 200rem;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
   border: 3px solid var(--main-color-red);
   padding: 0.2rem;
-  margin: 0 1rem 0 1rem;
+  margin: 1rem;
   background-color: var(--main-color-white);
 }
 
 .review__name {
-  vertical-align: middle;
   border-bottom: 1px solid var(--main-color-white);
   color: var(--main-color-white);
 }
 
 .review__content {
-  display: block;
   width: 95%;
-  /* text-align: right; */
   margin: 0 auto;
-  padding: 0.2rem;
+  padding: 0.5rem;
   border: 2px double var(--main-color-red);
   border-radius: 5px;
   background-color: var(--main-color-white);
