@@ -1,142 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- icons from https://icons8.com -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
+      rel="stylesheet"
+    />
 
-        <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
 
-        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
-        <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
-        
-        <title></title>
-        
-    </head>
+    <title></title>
+  </head>
+  <body class="body__grid">
+    <header class="grid__header header" id="btn__home">
+      <div class="icon__header">
+        <img
+          src="https://img.icons8.com/material/48/000000/cow.png"
+          alt="cow icon"
+        />
+        <img
+          src="https://img.icons8.com/material/48/000000/chicken.png"
+          alt="chicken icon"
+        />
+        <img
+          src="https://img.icons8.com/material/48/000000/pig.png"
+          alt="pig icon"
+        />
+      </div>
+      <div class="header-container">
+        <h1 class="heading__primary">H. BRISS & SON</h1>
+        <h2 class="heading__secondary">Family Butcher</h2>
+      </div>
 
-    <body class="body__grid">
-        
-        <header class="grid__header header" id="btn__home">
-            <div class="icon__header">
-                <img src="https://img.icons8.com/material/48/000000/cow.png" alt="cow icon"/>
-                <img src="https://img.icons8.com/material/48/000000/chicken.png" alt="chicken icon"/>
-                <img src="https://img.icons8.com/material/48/000000/pig.png" alt="pig icon"/>
-            </div>
-            <h1 class="heading__primary">H. BRISS & SON</h1>
-            <div class="icon__header">
-                <img src="https://img.icons8.com/material/48/000000/cow.png" alt="cow icon"/>
-                <img src="https://img.icons8.com/material/48/000000/chicken.png" alt="chicken icon"/>
-                <img src="https://img.icons8.com/material/48/000000/pig.png" alt="pig icon"/>
-            </div>
-            <h2 class="heading__secondary">Family Butcher</h2>
-            
-        </header>
+      <div class="icon__header">
+        <img
+          src="https://img.icons8.com/material/48/000000/cow.png"
+          alt="cow icon"
+        />
+        <img
+          src="https://img.icons8.com/material/48/000000/chicken.png"
+          alt="chicken icon"
+        />
+        <img
+          src="https://img.icons8.com/material/48/000000/pig.png"
+          alt="pig icon"
+        />
+      </div>
+    </header>
 
-        <main class="grid__main">
-            <div class="nav-bar">
-                <div class="dash-short"></div>
-                <div class="nav-bar__btn" id="btn__about">About</div>
-                <div class="dash"></div>
-                <div class="nav-bar__btn" id="btn__menu">Menu</div>
-                <div class="dash"></div>
-                <div class="nav-bar__btn" id="btn__contact">Contact</div>
-                <div class="dash-short"></div>
-            </div>
-            <div class="content content__grid">
+    <main class="grid__main">
+      <div class="nav-bar">
+        <div class="dash-short"></div>
+        <div class="nav-bar__btn" id="btn__about">About</div>
+        <div class="dash"></div>
+        <div class="nav-bar__btn" id="btn__menu">Menu</div>
+        <div class="dash"></div>
+        <div class="nav-bar__btn" id="btn__contact">Contact</div>
+        <div class="dash-short"></div>
+      </div>
+      <div class="content content__grid">
+        <!-- <div class="menu__img">
+                 <img src="./img/dir_sausage.jpg" alt="" class="menu__img--1">
+                 <img src="./img/pease-pudding-photo.jpeg" alt="" class="menu__img--2">
+                 <img src="./img/rump_steak.jpg" alt="" class="menu__img--3">
+                 <img src="./img/spare_ribs.jpg" alt="" class="menu__img--4">
+                 <img src="./img/blade_pork.jpg" alt="" class="menu__img--5">
+                 <img src="./img/leg_lamb.jpg" alt="" class="menu__img--6">
+                 <img src="./img/chicken.jpg" alt="" class="menu__img--7">
+                 <img src="./img/special.jpg" alt="" class="menu__img--8">
+             </div>
 
-            
-               <!-- <div class="menu__img">
-                   <img src="./img/dir_sausage.jpg" alt="" class="menu__img--1">
-                   <img src="./img/pease-pudding-photo.jpeg" alt="" class="menu__img--2">
-                   <img src="./img/rump_steak.jpg" alt="" class="menu__img--3">
-                   <img src="./img/spare_ribs.jpg" alt="" class="menu__img--4">
-                   <img src="./img/blade_pork.jpg" alt="" class="menu__img--5">
-                   <img src="./img/leg_lamb.jpg" alt="" class="menu__img--6">
-                   <img src="./img/chicken.jpg" alt="" class="menu__img--7">
-                   <img src="./img/special.jpg" alt="" class="menu__img--8">
-               </div>
+             <div class="menu__content">
 
-               <div class="menu__content">
+                  <div class="menu__heading">
+                      <h3 class="heading__tertiary menu__heading--main">MENU</h3>
+                      <h4 class="menu__heading--secondary">All our products are locally sourced</h4>
+                  </div>
+                  
+                 
+                  <div class="menu__list">
+                      <ul class="menu__list--item">
+                          <li class="menu__item">6 Sausages</li>
+                          <li class="menu__item">Pease Pudding</li>
+                          <li class="menu__item">Rump Steak</li>
+                          <li class="menu__item">Spare Ribs</li>
+                          <li class="menu__item">Blade Pork</li>
+                          <li class="menu__item">Leg of lamb</li>
+                          <li class="menu__item">Chicken</li>
+                          <li class="menu__item">Special Stuff</li>
+                      </ul>
+                      <ul class="menu__list--price">
+                          <li class="menu__price">£3.40</li>
+                          <li class="menu__price">£3.50</li>
+                          <li class="menu__price">£14.99 / KG</li>
+                          <li class="menu__price">£6.33 / KG</li>
+                          <li class="menu__price">£5.99 / KG</li>
+                          <li class="menu__price">£8.99 / KG</li>
+                          <li class="menu__price">£4.17 / KG</li>
+                          <li class="menu__price">£32.40 / KG</li>
+                      </ul>
+                  </div>
+              
+             </div> -->
+      </div>
+    </main>
 
-                    <div class="menu__heading">
-                        <h3 class="heading__tertiary menu__heading--main">MENU</h3>
-                        <h4 class="menu__heading--secondary">All our products are locally sourced</h4>
-                    </div>
-                    
-                   
-                    <div class="menu__list">
-                        <ul class="menu__list--item">
-                            <li class="menu__item">6 Sausages</li>
-                            <li class="menu__item">Pease Pudding</li>
-                            <li class="menu__item">Rump Steak</li>
-                            <li class="menu__item">Spare Ribs</li>
-                            <li class="menu__item">Blade Pork</li>
-                            <li class="menu__item">Leg of lamb</li>
-                            <li class="menu__item">Chicken</li>
-                            <li class="menu__item">Special Stuff</li>
-                        </ul>
-                        <ul class="menu__list--price">
-                            <li class="menu__price">£3.40</li>
-                            <li class="menu__price">£3.50</li>
-                            <li class="menu__price">£14.99 / KG</li>
-                            <li class="menu__price">£6.33 / KG</li>
-                            <li class="menu__price">£5.99 / KG</li>
-                            <li class="menu__price">£8.99 / KG</li>
-                            <li class="menu__price">£4.17 / KG</li>
-                            <li class="menu__price">£32.40 / KG</li>
-                        </ul>
-                    </div>
-                
-               </div> -->
-        
+    <section class="sidebar grid__sidebar">
+      <h3 class="heading__tertiary review__heading">Happy Customers</h3>
+      <div class="review__container">
+        <!-- <ul class="review">
+                  <li class="review__customer"><img src="img/cust_papa_lazarou.jpg" alt="picture of a customer" class="review__img"><span class="review__name">Papa Lazarou</span></li>
+                  <li class="review__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, officiis!</li>
+              </ul>
+              <ul class="review">
+                  <li class="review__customer"><img src="img/cust_pauline.png" alt="picture of a customer" class="review__img"><span class="review__name">Pauline Campbell-Jones</span></li>
+                  <li class="review__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, quo.</li>
+              </ul>
+              <ul class="review">
+                  <li class="review__customer"><img src="img/cust_geoff.jpg" alt="picture of a customer" class="review__img"><span class="review__name">Geoff Tipps</span></li>
+                  <li class="review__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, in.</li>
+              </ul> -->
+      </div>
+    </section>
 
-              </div>
-        </main>
+    <footer class="footer grid__footer">
+      <h3 class="heading__tertiary footer__header">EST. 1999 ROYSTON VASEY</h3>
+      <div class="icon__info">
+        <a href="https://icons8.com/">icons by Icons8</a>
+      </div>
+    </footer>
 
-        <section class="sidebar grid__sidebar">
-            <h3 class="heading__tertiary review__heading">Happy Customers</h3>
-            <div class="review__container">
-                <!-- <ul class="review">
-                    <li class="review__customer"><img src="img/cust_papa_lazarou.jpg" alt="picture of a customer" class="review__img"><span class="review__name">Papa Lazarou</span></li>
-                    <li class="review__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, officiis!</li>
-                </ul>
-                <ul class="review">
-                    <li class="review__customer"><img src="img/cust_pauline.png" alt="picture of a customer" class="review__img"><span class="review__name">Pauline Campbell-Jones</span></li>
-                    <li class="review__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, quo.</li>
-                </ul>
-                <ul class="review">
-                    <li class="review__customer"><img src="img/cust_geoff.jpg" alt="picture of a customer" class="review__img"><span class="review__name">Geoff Tipps</span></li>
-                    <li class="review__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, in.</li>
-                </ul> -->
-            </div>
-        </section>
-
-        <footer class="footer grid__footer">
-            <h3 class="heading__tertiary footer__header">EST. 1999 ROYSTON VASEY</h3>
-            <div class="icon__info">
-                <a href="https://icons8.com/">icons by Icons8</a>
-            </div>
-            
-        </footer>
-
-      
-       
-
-        
-        <script src="main.js"></script>
-    </body>
+    <script src="main.js"></script>
+  </body>
 </html>
 
-
-
 <!-- *************** HOME HTML -->
-                <!-- <h2 class="heading__secondary home__heading">WELCOME!</h2>
+<!-- <h2 class="heading__secondary home__heading">WELCOME!</h2>
                 <img src="img/hillary_welcome.jpg" alt="Picture of the owner" class="home__img">
                 <div class="home__text">It's like I always say. I'm a business man</div> -->
-                
-                
-                <!-- *************** ABOUT HTML -->
-                <!-- <div class="about__img">
+
+<!-- *************** ABOUT HTML -->
+<!-- <div class="about__img">
                     <img src="img/briss_1.jpg" alt="picture of owner" class="content__img img__top">
                     <img src="img/shop.jpg" alt="picture of shop" class="content__img img__bottom">
                 </div>
@@ -145,9 +156,8 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat atque esse tenetur, architecto nulla in magnam dignissimos optio hic eveniet nesciunt ipsum ullam inventore ab laboriosam aspernatur! Beatae deleniti vel adipisci aperiam ex at? Possimus mollitia recusandae sequi magni expedita quia nemo culpa cum placeat nobis sint, eveniet ullam optio cupiditate ut. Eligendi doloremque rerum facilis quisquam a dolor similique veniam atque quod officia consectetur dignissimos ipsum veritatis, libero et maxime molestiae numquam vitae nemo rem? Esse ab possimus inventore! Eius velit, soluta assumenda non dicta labore fugit laudantium tempora aspernatur, officia asperiores blanditiis explicabo suscipit maiores quas nesciunt praesentium.
                 </p></div> -->
 
-
-                <!-- conttact html ********************************************************************************** -->
-                 <!-- <section class="map-container">
+<!-- conttact html ********************************************************************************** -->
+<!-- <section class="map-container">
                     <div class="map" id='map'></div>
                         <script>
                             mapboxgl.accessToken = 'pk.eyJ1Ijoicmlja3lyaWNhcmRpbmhvIiwiYSI6ImNrZTRuMGJteTAycWEyenBvbDRpZW12ZDcifQ.P0eovMFE3-zpXFL8TXAnhg';
