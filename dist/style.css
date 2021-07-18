@@ -115,7 +115,7 @@ img {
 
 .heading__secondary {
   font-size: 3rem;
-  margin-top: 0.5rem;
+  margin: 1rem 0;
   font-weight: lighter;
   color: var(--main-color-red);
   font-family: 'Dancing Script', cursive;
@@ -324,6 +324,8 @@ img {
   background-color: var(--main-color-white);
 }
 
+/* ************************************************ NAV BAR */
+
 .nav-bar {
   grid-area: nav-bar;
   display: flex;
@@ -335,8 +337,8 @@ img {
 .nav-bar__btn {
   display: inline-block;
   font-family: var(--font-dancing-script);
-  font-size: 2rem;
-  padding: 0.2rem 2rem;
+  font-size: 3rem;
+  padding: 1rem 3rem;
   border: 3px solid var(--main-color-red);
   background-color: var(--main-color-white);
   margin: 0.4rem 0;
