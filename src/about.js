@@ -16,8 +16,6 @@ const aboutContent = () => {
 
   content.insertAdjacentHTML('beforeend', htmlImage);
   content.insertAdjacentHTML('beforeend', htmlText);
-
-  console.log('ABBOOUUTT');
 };
 
 export default aboutContent;

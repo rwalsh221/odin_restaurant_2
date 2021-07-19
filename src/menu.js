@@ -20,7 +20,6 @@ const menuSkeleton = () => {
 
   const screenWidth = window.matchMedia('(max-width: 1024px)');
   if (screenWidth.matches) {
-    console.log('MATCH');
     contentGrid.style.flexDirection = 'column';
   }
 
