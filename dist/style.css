@@ -517,7 +517,7 @@ img {
   color: var(--main-color-red);
   border: 2px solid var(--main-color-red);
   border-radius: 2rem;
-  width: 95%;
+  width: 98%;
   margin: 1rem auto;
   padding: 0.5rem;
   background-color: var(--secondary-color-red-light);
@@ -537,7 +537,7 @@ img {
   border-radius: 50%;
   border: 3px solid var(--main-color-red);
   padding: 0.2rem;
-  margin: 1rem;
+  margin: 0.5rem;
   background-color: var(--main-color-white);
 }
 
@@ -675,8 +675,38 @@ grid-template-areas:
   "contact-map contact-map";
 */
 
-@media screen and (max-width: 1175px) {
+@media screen and (max-width: 1280px) {
   html {
     font-size: 55%;
   }
+}
+
+@media screen and (max-width: 1175px) {
+}
+
+@media screen and (max-width: 1024px) {
+  .body__grid {
+    grid-template-columns: 100%;
+    grid-template-rows:
+      minmax(15vh, max-content) minmax(60vh, max-content) minmax(
+        10vh,
+        max-content
+      )
+      minmax(7vh, max-content);
+    grid-template-areas:
+      'header'
+      'main'
+      'sidebar'
+      'footer';
+  }
+}
+@media screen and (max-width: 1175px) {
+}
+@media screen and (max-width: 1175px) {
+}
+@media screen and (max-width: 1175px) {
+}
+@media screen and (max-width: 1175px) {
+}
+@media screen and (max-width: 1175px) {
 }
