@@ -18,7 +18,7 @@ const menuSkeleton = () => {
 
   contentGrid.style.display = 'flex';
 
-  const screenWidth = window.matchMedia('(max-width: 414px)');
+  const screenWidth = window.matchMedia('(max-width: 1024px)');
   if (screenWidth.matches) {
     console.log('MATCH');
     contentGrid.style.flexDirection = 'column';
