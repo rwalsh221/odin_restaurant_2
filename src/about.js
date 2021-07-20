@@ -14,7 +14,7 @@ const aboutContent = () => {
   contentGrid.style.gridTemplateRows = '100%';
   contentGrid.style.gridTemplateAreas = '"img content-text"';
 
-  const screenWidth = window.matchMedia('(max-width: 414px)');
+  const screenWidth = window.matchMedia('(max-width: 550px)');
   if (screenWidth.matches) {
     contentGrid.style.gridTemplateColumns = '100%';
     contentGrid.style.gridTemplateRows = 'repeat(2, max-content)';
