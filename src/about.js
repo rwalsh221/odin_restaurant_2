@@ -11,8 +11,15 @@ const aboutContent = () => {
 
   contentGrid.style.display = 'grid';
   contentGrid.style.gridTemplateColumns = '35% 65%';
-  contentGrid.style.gridTemplateRows = 'max-content 100%';
-  contentGrid.style.gridTemplateAreas = '"nav-bar nav-bar" "img content-text"';
+  contentGrid.style.gridTemplateRows = '100%';
+  contentGrid.style.gridTemplateAreas = '"img content-text"';
+
+  const screenWidth = window.matchMedia('(max-width: 414px)');
+  if (screenWidth.matches) {
+    contentGrid.style.gridTemplateColumns = '100%';
+    contentGrid.style.gridTemplateRows = 'repeat(2, max-content)';
+    contentGrid.style.gridTemplateAreas = '"img" "content-text"';
+  }
 
   content.insertAdjacentHTML('beforeend', htmlImage);
   content.insertAdjacentHTML('beforeend', htmlText);
